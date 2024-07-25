@@ -1,0 +1,38 @@
+
+/**/
+.inhtl{position:relative;float:left;}
+.af-footer{bottom:0px;height:40px;width:100%;box-shadow:-1px -2px 5px #babcbf inset;}
+.af-ok{width:70px;right:90px;margin-top:4px;}
+.af-cancel{width:70px;right:4px;;margin-top:4px;}
+.af-close{position:absolute;top:-10px;right:-21px;}
+.af-imageButton-main:hover{box-shadow: 0 0 8px #5a5a5a}
+.af-imageButton-main{border: 1px solid #babcbf;border-radius: 3px;box-shadow: 3px 3px 4px #CECECE;height: 90px;margin: 9px;width: 70px;}
+.af-imageButton{cursor: pointer;}
+.af-thmbnl{position:absolute;top:0;width:100%;height:70px;}
+.af-imageNm-btn, .af-download{
+     box-shadow: 0 0 5px #babcbf inset; box-sizing: content-box !important;
+    color: #0985c1 !important;height: 20px;overflow: hidden;padding: 0 4%;position: absolute;text-align: center;text-overflow: ellipsis;
+    text-transform: capitalize;top: 70px;white-space: nowrap; width: 96%;}
+.af-imageButton img{position:absolute;height:100%;width:100%;}
+
+#attachMain{border: 1px solid blue;border-radius: 3px;left: 1%;padding: 3px;position: absolute;top: 238px;width: 95%;min-height:30px;}
+.attachHeader{width:100%;background:#3e3e3e;box-shadow:1px 5px 9px #5A5A5A inset;}
+.attachHeader input{background: none repeat scroll 0 0 rgba(0, 0, 0, 0);text-transform: capitalize;
+    border: 1px solid #ffff00;border-radius: 3px;box-shadow: 1px 0 3px #ffff00;color: #fff;font: bold 16px arial,helvetica;height: 22px;
+    margin: 4px;    padding: 0;text-align: center;width: 300px;left:151px;position : absolute;}
+.af-upload-file-btn{height: 17px;position: absolute;right: 0;width: 70px;}
+.af-upload-file-btn-active{background:green !important}
+.af-image img, .af-image iframe{position:absolute;height:100%;width:100%;border:none;margin:0;}
+.af-download-text{margin-top:2px;}
+.af-download-img{background: url("../images/download_gif.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 17px;position: absolute;right: 1px;top: 2px;width: 17px;}
+.af-download{background:#fff;z-index:2;font-size: 9px !important;text-align: left !important;cursor:pointer;}
+
+.af-btn-focus{box-shadow : 1px 1px 1px #fff inset, -1px -1px 1px #fff inset;}
+
+.af-drag-droptext{
+    color: #92aab0 !important;display: table-cell;font-size: 200% !important;margin-bottom: 10px;position: relative;
+    text-align: center;vertical-align: middle;opacity : 0.3;bcakground : #fff;}
+.af-afterDragDrop{background: none repeat scroll 0 0 #216fa7;color: #fff !important;left: 0;opacity: 0.7;padding: 9px 36px;
+    position: absolute;top: 0;z-index: 2;}
+/**/

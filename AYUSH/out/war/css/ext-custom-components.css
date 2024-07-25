@@ -1,0 +1,275 @@
+@CHARSET "UTF-8";
+/**
+*	@author rabindranath.s
+*/
+
+/* ---------------------------------------------*/
+/* -------------->>> Main Menu <<<--------------*/
+/* ---------------------------------------------*/
+.x-odch-mainmenu {
+	background-color: lightgray;
+	
+}
+.x-odch-mainmenu .x-btn.x-btn-menu-active.x-btn-default-toolbar-medium, .x-odch-mainmenu .x-btn.x-btn-pressed.x-btn-default-toolbar-medium {
+	background-color: #edc9af;
+	background-image: none;
+}
+
+.x-odch-mainmenu .x-mask {
+	opacity: 0.8;
+	background: #000;
+}
+
+.x-odch-footer .x-mask {
+	opacity: 0.8;
+	background: #000;
+}
+
+.x-odch-mainmenu .x-odch-btn {
+	background-image: none;
+	border-style: hidden;
+}
+
+.x-odch-mainmenu .x-odch-btn.x-btn-focus.x-btn-default-toolbar-medium {
+	box-shadow: none;
+}
+.x-odch-mainmenu .x-odch-btn .x-btn-inner-default-toolbar-medium {
+    color: #434343;
+    /* font: bold 14px/18px helvetica,verdana,sans-serif; */
+    font: bold 15px/18px calibri,verdana,sans-serif;
+    max-width: 100%;
+    padding: 0 8px;
+}
+
+
+/* ---------------------------------------------------*/
+/* --------------->>> Home Tab Panel <<<--------------*/
+/* ---------------------------------------------------*/
+.x-odch-hometab {
+	
+}
+.x-odch-hometab .x-tab-bar-plain {
+	background: #ccc ;
+}
+.x-odch-hometab .x-odch-hometab-body {
+	border-left: 2px solid #5a5a5a !important;
+	border-right: 2px solid #5a5a5a !important;
+}
+.x-odch-hometab .x-tab-focus.x-tab-active {
+	box-shadow: none;
+}
+
+.x-odch-hometab .x-tab.x-tab-default {
+    background-color: #fff; /* #ECECEC */
+    border-color: #fff;
+}
+.x-odch-hometab .x-tab.x-tab-default.x-tab-default-left {
+	border-radius: 0;
+}
+.x-odch-hometab .x-tab.x-tab-active.x-tab-default, .x-odch-hometab .x-tab-bar-strip.x-tab-bar-strip-default {
+    background-color: #5a5a5a;
+    border-color: #5a5a5a;
+}
+.x-odch-hometab .x-tab.x-tab-default .x-tab-inner-default {
+	color: #000;
+}
+.x-odch-hometab .x-tab.x-tab-active.x-tab-default .x-tab-inner-default {
+	color: #fff;
+}
+.x-odch-hometab .x-tab .x-tab-icon-el.x-tab-icon-el-default {
+	border-radius: 20px;
+	height: 40px;
+	margin: 0 auto 6px;
+	width: 40px;
+	line-height: 40px;
+}
+.x-odch-hometab .x-tab-default-left .x-tab-wrap .x-tab-icon-el.x-tab-icon-el-default {
+	/* background-color: #157FCC; */
+}
+.x-odch-hometab .x-tab-default-left.x-tab-active .x-tab-wrap .x-tab-icon-el.x-tab-icon-el-default {
+	background-color: #fff; 
+}
+
+.x-odch-hometab .x-box-scroller-plain.x-box-scroller-tab-bar-default.x-box-scroller-top {
+    background-image: url("../images/x-empover-tabpanel-scroll-top.png");
+}
+.x-odch-hometab .x-box-scroller-plain.x-box-scroller-tab-bar-default.x-box-scroller-bottom {
+    background-image: url("../images/x-empover-tabpanel-scroll-bottom.png");
+}
+.x-odch-hometab .x-box-scroller-plain.x-box-scroller-tab-bar-default.x-box-scroller-left {
+    background-image: url("../images/x-empover-tabpanel-scroll-left.png");
+}
+.x-odch-hometab .x-box-scroller-plain.x-box-scroller-tab-bar-default.x-box-scroller-right {
+    background-image: url("../images/x-empover-tabpanel-scroll-right.png");
+}
+.x-odch-hometab .x-box-scroller-tab-bar-default {
+	opacity: 0.8;
+}
+.x-odch-hometab .x-box-scroller-tab-bar-default.x-box-scroller-hover {
+	opacity: 1;
+}
+.x-odch-hometab .x-box-scroller-tab-bar-default.x-box-scroller-disabled {
+	opacity: 0.25;
+}
+/* ---------------------------------------------------*/
+/* --------------->>> Grid <<<--------------*/
+/* ---------------------------------------------------*/
+.x-odch-grid {
+	
+}
+
+.x-odch-grid .x-panel-header-default {
+	background-color: #5a5a5a;
+}
+
+.x-odch-grid .x-grid-item {
+	background-color: #efefef;
+	/* border-bottom : 1px solid #fff; */
+}
+
+.x-odch-grid .x-grid-item-alt {
+	background-color: #e0e0e0;
+	/* border-bottom : 1px solid #fff; */
+}
+
+.x-odch-grid .x-grid-item-focused .x-grid-cell-inner:before {
+	border: 0 none;
+}
+
+.x-odch-grid .x-grid-item-selected, .x-odch-grid .x-grid-with-row-lines .x-grid-item.x-grid-item-selected {
+	background-color: #c1ddf1;
+	color: black;
+}
+.x-odch-grid .x-grid-with-row-lines .x-grid-item.x-grid-item-over {
+	background-color: #e2eff8;
+	border-color: #e2eff8;
+}
+.x-odch-grid .x-grid-with-col-lines .x-grid-cell {
+	border-right: 1px solid #fff;
+}
+.x-odch-grid .x-column-header {
+	background-color: #BCBCBC;
+	color: #000;
+	border-color: #fff;
+}
+.x-odch-grid .x-column-header-over, .x-odch-grid .x-column-header-sort-ASC, .x-odch-grid .x-column-header-sort-DESC, .x-odch-grid .x-column-header-open {
+	background-color: #99B4D1;
+}
+.x-odch-grid .x-grid-filters-filtered-column {
+	background-color: #2cacac;
+}
+.x-odch-grid .x-grid-empty {
+    font: 16px helvetica,arial,verdana,sans-serif;
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+
+/* ---------------------------------------------------*/
+/* --------------->>> Window <<<--------------*/
+/* ---------------------------------------------------*/
+
+.x-odch-window .x-window-header-default {
+    background-color: #5a5a5a;
+    border-width: 5px 5px 0 5px !important;
+}
+
+.x-odch-window .x-toolbar-footer {
+    background-color: #FFFFFF;
+}
+.x-odch-window .x-window-header-title-default > .x-title-text-default {
+    padding: 0px 2px;
+}
+
+.x-odch-window .x-window-header-default .x-tool-img, .x-odch-hometab .x-tool-close{
+    height: 24px;
+    width: 24px;
+}
+
+.x-odch-window .x-window-header-default .x-tool-close, .x-odch-hometab .x-tool-close {
+    background-color: transparent;
+    background-image: url("../images/window-close-icon.png");
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+    opacity: 1;
+}
+.x-odch-window .x-window-header-default .x-tool-maximize {
+	background-color: transparent;
+    background-image: url("../images/window-maximize-icon.png");
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+    background-size: 24px 24px;
+    opacity: 1;
+}
+.x-odch-window .x-window-header-default .x-tool-restore {
+	background-color: transparent;
+    background-image: url("../images/window-restore-icon.png");
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+    background-size: 24px 24px;
+    opacity: 1;
+}
+
+.x-odch-window .x-tool-over .x-tool-img {
+	opacity: 0.6;
+}
+
+/**  Grid Tool bar button ***/
+
+.x-odch-tbar-btn {
+    background-color: #0E63A4;
+    background-image: none;
+    border-radius : 0px;
+    border-color: #0E63A4;
+}
+
+.x-odch-tbar-btn .x-btn-inner-default-toolbar-small ,.x-btn-inner-default-small{
+    color: white;
+}
+
+.x-odch-tbar-btn.x-btn-over.x-btn-default-toolbar-small, .x-odch-tbar-btn.x-btn-over.x-btn-default-small {
+    background-color: #157FCC;
+    background-image: none;
+    opacity: 0.9;
+}
+.x-odch-tbar-btn.x-btn.x-btn-disabled.x-btn-default-toolbar-small, .x-odch-tbar-btn.x-btn.x-btn-disabled.x-btn-default-small {
+	background-color: #157FCC;
+	background-image: none;
+}
+
+/** Finance - Transfer Note Outstanding amount display field **/
+
+.x-odch-finance-amount-display{
+	background-color : #B4CEE5 ;
+}
+.x-odch-finance-amount-display .x-form-display-field-default{
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.x-odch-tbar-btn.x-btn-focus.x-btn-default-toolbar-small {
+    background-color: #157FCC;
+    background-image : none;
+   
+}
+
+/* Custom Trigger Field */
+
+.x-odch-triggerCls {
+	background: url("../images/x.png") no-repeat scroll 5px 5px rgba(0, 0, 0, 0) !important;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.x-odch-triggerFieldCls {
+	
+}
+
+.x-odch-triggerFieldBodyCls {
+	
+}
+
+.x-odch-custom-checkcolumn .x-column-header-inner{
+	padding-bottom: 4px;
+    padding-top: 5px;
+}

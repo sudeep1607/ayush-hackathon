@@ -1,0 +1,298 @@
+/* * {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: zz;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+		sans-serif;
+	font-size: 12px;
+}
+
+.container {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+.login_bg {
+	width: 400px;
+	position: absolute;
+	height: 280px;
+	top: 30%;
+	left: 35%;
+	background-color: #f0f2ed;
+}
+
+.inlog_pd {
+	padding: 10px;
+}
+.logo {
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+    float: left;
+    padding: 10px;
+    height: 20px;
+    width: 19px;
+    background-size: 40px auto;
+}
+
+.login_he {
+	background-color: #578E72;
+	height: 35px;
+	line-height: 16px;
+	text-align: center;
+	font-size: 22px;
+	color: #FFF;
+	padding: 10px;
+	
+}
+
+.text_filed {
+	width: 280px;
+	height: 25px;
+	 margin-top: 15px;
+	padding: 8px;
+	border: 1px solid #ccc;
+}
+
+.login_btn {
+	background-color: #578E72;
+	border: none;
+	cursor: pointer;
+	padding: 10px 43px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	margin-top: 25px;
+}
+
+.login_btn:hover {
+	background-color: #00CCFF;
+	box-shadow: #666 0px 4px 5px;
+	border: none;
+	cursor: pointer;
+	padding: 10px 43px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	margin-top: 25px;
+}
+
+input[type='text'] {
+	background-image: url(../images/user.png);
+	background-position: 7px 7px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+}
+
+input[type='password'] {
+	background-image: url(../images/password.png);
+	background-position: 7px 7px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+}
+
+
+
+
+.alert {
+    bottom: 10px;
+    color: #b24e35;
+    font-weight: bold;
+    left: 10px;
+    position: relative;
+}
+.header {
+    height: 80px;
+    padding: 5px;
+    background-image: url(../images/PSPCL.jpg);
+    background-position: 7px 7px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+} */
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+
+body{font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif, serif; font-size:13px;}
+*{margin:0px;
+padding:0px;}
+.container{min-height: 100%;width:100%;height: 100%;margin-top:-2px;}
+.main-header{background-color:#05334A;position:fixed; width:100%;height: 100px;
+z-index: 1;}
+.logo1{height:79px; float:left;padding: 10px 0px 9px 27px ;}
+.logo2{height:79px; float:right;padding: 10px 29px;position: relative;
+bottom: 58px;
+}
+.top_he{vertical-align:middle;padding-top:29px;padding-right:0%;color: white;font-size: 25px}
+h2{text-align:center;}
+.sidebar1{background-color:   #3E4649    /*background-color:#47838e*/;width:18%;float:left; position:fixed; height:100%;}
+.content{background-color:#D3D3D3  ;width:64%; margin-left:18%; overflow:auto; max-height:100%; position:fixed; height:100%;float:left;}
+.sidebar2{background-color:   #3E4649  ;width:18%;float:right; position:fixed; height:100%; right:0px;}
+.dashboard{padding-top:10px;}
+.left-sec{text-align:center;padding-top:20px;}
+.login_sec{margin:0px 0px;background-color: #5F6061 ;}
+.about-sec{margin:40px;text-align:center;}
+li:first-child{margin-top:10px;}
+li{list-style-type:none;margin-top:5px;}
+a{text-decoration:none;color:rgb(204,51,0);}
+h3{text-align:center;}
+hr{margin:20px 10px; color:rgb(204,204,204);opacity:0.7}
+<!--calender-->
+<!--
+span.label {color:black;width:35;height:16;text-align:center;margin-top:0;background:#ffF;font:bold 13px Arial}
+span.c1 {cursor:hand;color:black;width:30;height:16;text-align:center;margin-top:0;background:#ffF;font:bold 13px Arial}
+span.c2 {cursor:hand;color:red;width:30;height:16;text-align:center;margin-top:0;background:#ffF;font:bold 13px Arial}
+span.c3 {cursor:hand;color:#b0b0b0;width:30;height:16;text-align:center;margin-top:0;background:#ffF;font:bold 12px Arial}
+-->
+.user-icon{ position:absolute;
+top: 58px;left: 36px;}
+.key-icon{position:absolute;
+top: 110px;left: 21px;}
+.text{margin:15px;}
+.text h3{padding-bottom:10px;}
+.text p{color:rgb(255,255,255);text-align:justify;}
+.email{ background-image: url("../images/login/profile_icon.png");
+    background-repeat: no-repeat;
+    border: medium none;
+    height: 11px;
+    margin-bottom: 10px;
+    padding: 8px 8px 8px 36px;
+    position: relative;
+    width: 70%;
+    border-radius:4px;}
+.password{ background-image: url(../images/login/key-icon.png);
+    background-repeat: no-repeat;
+    border: medium none;
+    height: 11px;
+    margin-bottom: 10px;
+    padding: 8px 8px 8px 36px;
+    position: relative;
+    width: 70%;
+    border-radius:4px;}
+button{  border: medium none;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 5px;
+    width: 36%;
+    border-radius:4px;}
+form{padding:10px;text-align:center;}
+.alert_sec{color:#fff;margin:20px;}
+.scroll-text{margin-top:20%;text-align:justify;}
+footer{background-color:#05334A;text-align:center;color:#fff; height:20px; position:fixed; bottom:0px; width:100%; padding:10px;}
+.CSSTableGenerator {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #d5d5d5;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.CSSTableGenerator table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.CSSTableGenerator tr:hover td{
+	
+}
+.CSSTableGenerator tr:nth-child(odd){ background-color:#e5e5e5; }
+.CSSTableGenerator tr:nth-child(even)    { background-color:#ffffff; }.CSSTableGenerator td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #d5d5d5;
+	border-width:0px 1px 1px 0px;
+	text-align:center;
+	padding:7px;
+	font-size:12px;
+	font-family:Helvetica;
+	font-weight:normal;
+	color:#000000;
+}.CSSTableGenerator tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.CSSTableGenerator tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.CSSTableGenerator tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td{
+		/*background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );
+	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	background: -o-linear-gradient(top,#4c4c4c,000000);*/
+    background-color:#354052;
+	/*background-color:#4c4c4c;*/
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+.CSSTableGenerator tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );
+	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	background: -o-linear-gradient(top,#4c4c4c,000000);
+
+	background-color:#4c4c4c;
+}
+.CSSTableGenerator tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.table-sec{margin:40px;margin}
+
+.alert
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:12px; 
+	width:280px; 
+	margin-left:40px;
+	margin-top:5px;
+	color: #B22222;
+}
+
+
