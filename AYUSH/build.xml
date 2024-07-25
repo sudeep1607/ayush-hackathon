@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<project name="AYUSH" basedir="." default="build" >
+	<property environment="env" />
+	<property file="build.properties" />
+
+	<property name="name" value="AYUSH" />
+	<property name="build.dir" value="${basedir}/builds" />
+
+	<property name="src.dir" value="src" />
+	<property name="src.main.dir" value="${src.dir}/main" />
+	<property name="src.java.dir" value="${src.main.dir}/java" />
+	<property name="src.conf.dir" value="${src.main.dir}/config" />
+	<property name="src.res.dir" value="${src.main.dir}/res" />
+	<property name="src.web.dir" value="${src.main.dir}/web" />
+	<property name="web.dir" value="${src.dir}/main/web" />
+	<property name="lib.dir" value="${basedir}/lib" />
+
+	<property name="out.dir" value="${basedir}/out" />
+	<property name="out.classes.dir" value="${out.dir}/classes" />
+	<property name="out.dist.dir" value="${out.dir}/dist" />
+	<property name="out.lib.dir" value="${out.dir}/lib" />
+	<property name="out.war.dir" value="${out.dir}/war" />
+	<property name="out.warupload.dir" value="${out.war.dir}/upload" />
+	<property name="out.warbarcode.dir" value="${out.warupload.dir}/BarCode" />
+
+	<property name="out.webinf.dir" value="${out.war.dir}/WEB-INF" />
+	<property name="out.warlib.dir" value="${out.war.dir}/WEB-INF/lib" />
+
+	<path id="db-classpath">
+		<fileset dir="${lib.dir}" includes="[DB]-MySQL-JDBC-5.1.21.jar" />
+	</path>
+
+	<path id="master-classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean" description="Clean out dir">
+		<delete dir="${out.dir}" />
+	</target>
+
+	<target name="compile" depends="createProps" description="Compile main source tree java files, resources, configs etc.,">
+		<mkdir dir="${out.classes.dir}" />
+		<javac destdir="${out.classes.dir}" source="1.7" target="1.7" debug="true" deprecation="false" optimize="false" failonerror="true" includeantruntime="false">
+			<src path="${src.java.dir}" />
+			<classpath refid="master-classpath" />
+		</javac>
+
+		<copy todir="${out.classes.dir}" preservelastmodified="true">
+			<fileset dir="${src.res.dir}">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${out.webinf.dir}" preservelastmodified="true">
+			<fileset dir="${src.conf.dir}">
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build" depends="compile,publishALL" description="Compile main source tree java files into class files, generate jar files">
+
+		<mkdir dir="${out.classes.dir}" />
+		<mkdir dir="${out.lib.dir}" />
+		<mkdir dir="${out.warlib.dir}" />
+		<mkdir dir="${out.warupload.dir}" />
+        <mkdir dir="${out.warbarcode.dir}" />
+
+		<jar jarfile="${out.lib.dir}/${name}.jar" compress="true" basedir="${out.classes.dir}" />
+
+		<copy todir="${out.warlib.dir}" preservelastmodified="true">
+			<fileset dir="${out.lib.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+
+		<copy todir="${out.warlib.dir}" preservelastmodified="true">
+			<fileset dir="${lib.dir}">
+				<include name="*.jar" />
+				<exclude name="[Servlet]-servlet-api.jar" />
+			</fileset>
+		</copy>
+
+
+	</target>
+
+	<target name="createProps">
+		<filter token="datasource.driver" value="${datasource.driver}" />
+		<filter token="datasource.name" value="${datasource.name}" />
+		<filter token="datasource.url" value="${datasource.url}" />
+		<filter token="datasource.username" value="${datasource.username}" />
+		<filter token="datasource.password" value="${datasource.password}" />
+		<filter token="datasource.maxPoolSize" value="${datasource.maxPoolSize}" />
+		<filter token="datasource.minPoolSize" value="${datasource.minPoolSize}" />
+		<filter token="datasource.maxIdleTime" value="${datasource.maxIdleTime}" />
+		<filter token="datasource.removeAbandoned" value="${datasource.removeAbandoned}" />
+		<filter token="datasource.removeAbandonedTimeout" value="${datasource.removeAbandonedTimeout}" />
+		<filter token="datasource.logAbandoned" value="${datasource.logAbandoned}" />
+		<filter token="datasource.validationQuery" value="${datasource.validationQuery}" />
+
+		<filter token="hibernate.dialect" value="${hibernate.dialect}" />
+		<filter token="hibernate.show_sql" value="${hibernate.show_sql}" />
+		<filter token="hibernate.format_sql" value="${hibernate.format_sql}" />
+
+	
+
+		<filter token="log4j.rootLogger" value="${log4j.rootLogger}" />
+		<filter token="log4j.logger.org.apache.catalina" value="${log4j.logger.org.apache.catalina}" />
+		<filter token="log4j.appender.Console" value="${log4j.appender.Console}" />
+		<filter token="log4j.logger.org.hibernate.SQL" value="${log4j.logger.org.hibernate.SQL}" />
+		<filter token="log4j.appender.Console.layout" value="${log4j.appender.Console.layout}" />
+		<filter token="log4j.appender.Console.layout.ConversionPattern" value="${log4j.appender.Console.layout.ConversionPattern}" />
+		<filter token="log4j.appender.RoleFile" value="${log4j.appender.RoleFile}" />
+		<filter token="log4j.appender.RoleFile.File" value="${log4j.appender.RoleFile.File}" />
+		<filter token="log4j.appender.RoleFile.MaxFileSize" value="${log4j.appender.RoleFile.MaxFileSize}" />
+		<filter token="log4j.appender.RoleFile.MaxBackupIndex" value="${log4j.appender.RoleFile.MaxBackupIndex}" />
+		<filter token="log4j.appender.RoleFile.layout" value="${log4j.appender.RoleFile.layout}" />
+		<filter token="log4j.appender.RoleFile.layout.ConversionPattern" value="${log4j.appender.RoleFile.layout.ConversionPattern}" />
+
+		
+	</target>
+
+	<target name="publishJS" description="Publishes all java scripts files">
+		<copy todir="${out.war.dir}" preservelastmodified="true">
+			<fileset dir="${web.dir}">
+				<include name="scripts/**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="publishJSPs" description="Publishes all JSP files">
+		<copy todir="${out.war.dir}" preservelastmodified="true">
+			<fileset dir="${web.dir}">
+				<include name="WEB-INF/jsps/**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="publishCSS" description="Publishes all css files">
+		<copy todir="${out.war.dir}" preservelastmodified="true">
+			<fileset dir="${web.dir}">
+				<include name="css/**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="publishIMAGES" description="Publishes all image files">
+		<copy todir="${out.war.dir}" preservelastmodified="true">
+			<fileset dir="${web.dir}">
+				<include name="images/**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="publishALL" description="Publishes all wab" >
+		<copy todir="${out.war.dir}" preservelastmodified="true">
+			<fileset dir="${web.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="DB-clean">
+		<sql driver="${datasource.driver}" url="${datasource.url}" userid="${datasource.username}" password="${datasource.password}" onerror="continue">
+			<classpath>
+				<path refid="db-classpath" />
+			</classpath>
+		    DROP DATABASE ${datasource.name};
+		</sql>
+	</target>
+
+	<target name="DB-populateData">
+ 		<echo message="LOAD DATA USING: ${datasource.driver} ${datasource.url}" />
+		<!-- <sql driver="${datasource.driver}" url="${datasource.url}" userid="${datasource.username}" password="${datasource.password}" onerror="continue" src="AMS_MASTER_SCRIPTS.sql">
+			<classpath refid="db-classpath" />
+		</sql> -->
+		
+	</target>
+
+</project>

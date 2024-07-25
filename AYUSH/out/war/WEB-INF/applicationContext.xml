@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"  
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       	http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop   
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<context:annotation-config />
+	<aop:aspectj-autoproxy />
+	<mvc:default-servlet-handler />
+	<mvc:annotation-driven />
+
+	<context:component-scan base-package="com.fts" />
+	<context:property-placeholder location="classpath:envSettings.properties" />
+    
+    
+	<bean id="freemarkerConfig"
+		class="org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean">
+		<property name="templateLoaderPath" value="ftl" />
+	</bean>
+	<bean id="appConfig" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:appConfig.properties" />
+    </bean>
+
+	<bean id="pathConfig"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location" value="classpath:filePath.properties" />
+	</bean>
+	
+	<import resource="hibernate-cfg.xml" />
+	<import resource="schedular-context.xml" />
+	 
+
+	<!-- To Exclude the resource passing from Login Interceptor -->
+
+	<mvc:resources mapping="/resources/**" location="/images/**" />
+	<mvc:resources mapping="/resources/**" location="/css/**" />
+	<mvc:resources mapping="/resources/**" location="/login/**" />
+	<mvc:resources mapping="/resources/**" location="/js/**" />
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/admin/**" />
+			<mvc:exclude-mapping path="/login/**" />
+			<mvc:exclude-mapping path="/images/**" />
+			<mvc:exclude-mapping path="/images/home/**" />
+			<mvc:exclude-mapping path="/css/**" />
+			<mvc:exclude-mapping path="/js/**" />
+			<bean class="com.fts.web.interceptors.LoginInterceptor" />
+		</mvc:interceptor>
+		
+		 <mvc:interceptor>
+			<mvc:mapping path="/master/" />
+			<mvc:mapping path="/command" />
+			<mvc:mapping path="/tr/**" />
+			<mvc:mapping path="/login/**" />
+			
+			<mvc:exclude-mapping path="/images/**" />
+			<mvc:exclude-mapping path="/css/**" />
+			<mvc:exclude-mapping path="/js/**" />
+			<bean class="com.fts.web.interceptors.EventLogInterceptor" />
+		 </mvc:interceptor>  
+		
+	</mvc:interceptors>  
+</beans>

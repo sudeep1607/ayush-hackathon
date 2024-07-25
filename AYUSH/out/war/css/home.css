@@ -1,0 +1,355 @@
+@CHARSET "UTF-8";
+
+#main {
+	background: #3892D3;
+	height: 100%;
+	width: 100%;
+}
+
+#homeBody {
+	margin: 0 auto;
+	position: relative;
+	width: 1100px;
+}
+
+#x-odch-home-header-main {
+	align: center;
+	background-color: #3e3e3e;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 20px;
+	height: 58px;
+	position: absolute; text-align : center;
+	width: 100%;
+	text-align: center;
+}
+
+
+.x-odch-header-box {
+	display: inline-block;
+	*display: inline; /*For IE7*/
+	*zoom: 1; /*For IE7*/
+	height: 50px;
+	position: relative;
+}
+
+#x-odch-home-header-logo {
+	float: left;
+margin-left: 5px;
+/* width: 40px; */
+top: 2px;
+}
+#x-odch-home-header-logo .hlogo
+{
+width: 42px;
+/* padding: 1px 3px !important;
+background: rgb(188, 9, 9) none repeat scroll 0% 0%;
+border-radius: 50%; */
+float: left;
+}
+#x-odch-home-header-logo .header_text_admin
+{
+    float: left;
+    line-height: 52px;
+    padding-left: 20px;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: Trebuchet MS;
+    text-shadow: 3px 2px #14617e;
+}
+.x-odch-home-header-icon {
+	width: 80px;
+	height: 52px;
+	cursor: pointer;
+}
+
+#x-odch-profile-info {
+	float: right;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+}
+
+ #x-odch-signout {
+	float: right;
+    margin: 15px 10px 0 0;
+        background: none;
+}
+#x-odch-signout button {
+	height: 35px; */
+    /* width: 135px; */
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px solid #D2D3D7;
+    /* font-family: helvetica, arial, verdana, sans-serif; */
+    /* font-size: 13px; */
+    cursor: pointer;
+    /* border-radius: 30px; */
+        background: none;
+}
+ #x-odch-change-password {
+    float: left;
+     margin: 15px 10px 0 0;
+         background: none;
+}
+
+#x-odch-change-password button {
+	height: 35px; */
+    /* width: 135px; */
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px solid #D2D3D7;
+    /* font-family: helvetica, arial, verdana, sans-serif; */
+    /* font-size: 13px; */
+    cursor: pointer;
+    /* border-radius: 30px; */
+        background: none;
+}
+#x-odch-change-password button:HOVER, #x-odch-signout button:HOVER,#x-odch-project-info button:HOVER,#x-odch-role-info button:HOVER {
+	background-color: transparent;
+}
+#x-odch-change-report {
+    float: left;
+     margin: 4px 10px 0 0;
+         background: none;
+}
+#x-odch-change-report button
+{
+background: none;
+    border: 0;
+    cursor: pointer;
+}
+#x-odch-change-report img
+{
+	width:37px;
+}
+#x-odch-change-password img, #x-odch-signout img
+{
+    width: 30px;
+    background: transparent;
+}
+#x-odch-notification {
+	float: right;
+    width: 80px;
+}
+#x-odch-notification-logo {
+    cursor: pointer;
+    height: 24px;
+    margin-top: 13px;
+    width: 24px;
+} 
+.x-odch-home-footer
+{
+	background-color : #3e3e3e;
+	font-weight: bold;
+	font-family: helvetica,arial,verdana,sans-serif;
+	text-align: center;
+	color : white;
+	font-size:11px;
+	height: 18px;
+}
+.x-odch-home-footer a
+{
+	text-decoration:none;
+	font-weight: bold;
+	color:#7bba52;
+}
+
+.viewportProgressBarLoader{
+	
+	height: 25px;
+	
+}
+
+.viewportProgressBarLoader .x-progress-text, .viewportProgressBarLoader .x-progress-bar {
+	height: 25px;
+	font-size: 13px;
+}
+
+
+#x-odch-citizen-info {
+    float: left;
+    font-size: 16px;
+    margin: 16px 10px 0 0;
+}
+
+
+ 
+
+#x-odch-project-info, #x-odch-role-info {
+    float: left;
+    top: 6px;
+   margin-left: 10px;
+   color:#ffffff
+}
+
+
+
+#x-odch-role-info button {
+    background-color: #ffffff;
+    border: 1px solid #d2d3d7;
+    cursor: pointer;
+    font-family: helvetica,arial,verdana,sans-serif;
+    font-size: 13px;
+    height: 35px;
+    margin-left: 20px;
+    margin-top: -2px;
+    border-radius: 15px;
+    width: 135px;
+    border-radius: 30px;
+}
+
+#x-odch-project-info button {
+   background-color: #ffffff;
+    border: 1px solid #d2d3d7;
+    cursor: pointer;
+    font-family: helvetica,arial,verdana,sans-serif;
+    font-size: 13px;
+    height: 35px;
+   border-radius: 15px;
+    width: 135px;
+}
+
+.normal-status .x-change-cell {
+background-color: #FFB0C4;
+color:red;
+          }
+ 
+.default-status   {
+  background-color:green;
+   
+}
+
+.x-odch-header-box1 {
+      display: inline-block;
+    /* height: 50px; */
+    /* left: 35%; */
+    position: relative;
+    margin-top: 11px;
+    float: right;
+    right: 190px;
+}
+.x-odch-header-box1 .hlogo
+{
+    width: 38px;
+    float: left;
+    margin-right: 15px;
+}
+.x-odch-header-box1 .user_name
+{
+line-height: 25px;
+    font-size: 15px;
+    float: left;
+}
+.x-odch-header-box1 .user_name h5
+{
+    line-height: 13px;
+    color: #5dc6fb;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* OVERRIDE THE THEME CSS RESPONSIBLE FOR BELOW CSS*/
+ .x-odch-grid .x-panel-header-default {
+    /* background: -webkit-linear-gradient(to right, #05334a , #5baece) !important;
+    background: linear-gradient(to right, #05334a , #5baece) !important;
+    background: #05334a !important;
+    background: -webkit-linear-gradient(to right, #05334a , #5baece) !important;
+    background: linear-gradient(to right, #05334a, #5baece ) !important; */
+    background:#373737 !important;
+    
+}
+.x-odch-hometab .x-tab.x-tab-active.x-tab-default, .x-odch-hometab .x-tab-bar-strip.x-tab-bar-strip-default {
+    /* background: -webkit-linear-gradient(to left, #05334a , #5baece) !important;
+    background: linear-gradient(to left, #05334a , #5baece) !important;
+    background: #05334a !important;
+    background: -webkit-linear-gradient(to left, #05334a , #5baece) !important;
+    background: linear-gradient(to left, #05334a, #5baece ) !important;
+    border-color: #056696  !important; */
+    
+    background: -webkit-linear-gradient(to left, #05334a , #000000) !important;
+    background: linear-gradient(to left, #05334a , #000000) !important;
+    background: #05334a !important;
+    background: -webkit-linear-gradient(to left, #05334a , #000000) !important;
+    background: linear-gradient(to left, #05334a, #000000 ) !important;
+    border-color: #05334a !important;
+}
+.x-toolbar-default .x-toolbar-separator-horizontal {
+   
+    display: none;
+}
+.x-odch-grid .x-grid-item-selected, .x-odch-grid .x-grid-with-row-lines .x-grid-item.x-grid-item-selected {
+    background-color: #aae3ff !important;
+    color: black;
+}
+.x-btn-default-toolbar-medium {
+    background-image: none;
+    padding: 2px 7px  !important;
+    border-style: hidden;
+    color: #000000;
+    /*border: solid 1px #0076a3  !important;
+    background: #0095cd  !important;
+    background: -webkit-gradient(linear, right top, right bottom, from(#00adee), to(#0078a5))  !important;
+    background: -moz-linear-gradient(bottom, #00adee, #0078a5)  !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5')  !important;
+    -webkit-box-shadow: 0 -1px 1px 0 rgba(255,255,255,0.701961) inset, 0 1px 1px 0 rgb(177,106,2);
+    box-shadow: 0 -1px 1px 0 rgba(255,255,255,0.701961) inset, 0 1px 1px 0 rgb(177,106,2); */
+}
+.x-odch-mainmenu .x-odch-btn .x-btn-inner-default-toolbar-medium {
+    color: #000000 !important;
+}
+ .x-odch-mainmenu .x-odch-btn:hover 
+{
+    background: dimgray  !important;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#05334a), to(#000000)) !important;
+    background: -moz-linear-gradient(top, #05334a, #000000) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05334a', endColorstr='#000000'); */
+} 
+
+/* .vpcs-menubar-btn-active
+{
+background: #000000  !important;
+color:#000000 !important;
+} */
+#home-body
+{
+background: url(../images/Default-Bg.png);
+background-size: cover;
+    background-position: 0px 38px;
+}
+.x-panel-body-default, .x-panel-default
+{
+background: transparent !important;
+
+}
+.x-odch-hometab .x-tab-bar-plain
+{
+	 background: transparent !important; 
+}
+.x-odch-hometab .x-tab.x-tab-default
+{
+	    /* background: linear-gradient(to left, #0091c8, #ade4fd ) !important;
+	    background: -webkit-linear-gradient(to left, #0091c8, #ade4fd ) !important;
+	    background: -moz-linear-gradient(to left, #0091c8, #ade4fd ) !important; */
+	    
+	    background: #373737 !important;
+	    
+}
+.x-closable .x-panel-body-default {
+    border-width: 0 !important;
+    /* background: url(../images/panelbg.jpg) !important; */
+}
+.x-btn-disabled.x-btn-default-small {
+    
+}
+.x-grid-item-container {
+
+    border-bottom: 1px solid #bcbcbc;
+}
+  .mousepointer { cursor: pointer; }
+  .mydashboard {
+ display:  none !important; 
+  }
+  .scanFile
+{
+	style	:'font-color:maroon;font-weight:bold;'
+}
+  

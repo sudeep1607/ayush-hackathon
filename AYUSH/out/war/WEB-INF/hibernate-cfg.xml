@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.fts.hibernate.models.UserInfo</value>
+				<value>com.fts.hibernate.models.Role</value>
+				<value>com.fts.hibernate.models.MenuInfo</value>
+				<value>com.fts.hibernate.models.ScreenInfo</value>
+				<value>com.fts.hibernate.models.DesignationInfo</value>
+				<value>com.fts.hibernate.models.EventLogger</value>
+				<value>com.fts.hibernate.models.Section</value>
+				<value>com.fts.hibernate.models.RoleScreen</value>
+				<value>com.fts.hibernate.models.FileType</value>
+                <value>com.fts.hibernate.models.FileCreationAuthentication</value>
+                <value>com.fts.hibernate.models.Organization</value>
+                <value>com.fts.hibernate.models.DeviceInfo</value>
+                <value>com.fts.filemanagement.models.FileEntry</value>
+                <value>com.fts.workflow.hibernate.models.WFApprovalAuthorityMap</value>
+                <value>com.fts.hibernate.models.UserSection</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<!--  <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>-->
+				<prop key="hibernate.hbm2ddl.auto">update</prop> 
+			</props>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="org.postgresql.Driver" />
+		<property name="jdbcUrl" value="jdbc:postgresql://35.202.48.173:5432/ayush" />
+		<property name="user" value="postgres" />
+		<property name="password" value="root" />
+		<property name="minPoolSize" value="2" />
+		<property name="maxPoolSize" value="10" />
+		<property name="maxIdleTime" value="3" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="txInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributeSource">
+			<bean
+				class="org.springframework.transaction.annotation.AnnotationTransactionAttributeSource" />
+		</property>
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="true" />
+
+	<bean id="dao" class="com.fts.hibernate.common.HibernateDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>
